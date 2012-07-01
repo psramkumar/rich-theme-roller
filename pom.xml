@@ -5,11 +5,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>rich.theme.roller</groupId>
-	<artifactId>rich.theme.roller</artifactId>
+	<artifactId>rich-theme-roller</artifactId>
 	<name>RichFaces 4 Theme Roller</name>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<url>http://localhost:8080/rich-theme-roller</url>
+
 
 	<repositories>
 		<repository>
@@ -54,11 +55,19 @@
 	</properties>
 
 	<build>
-		<finalName>rich.theme.roller</finalName>
+		<finalName>rich-theme-roller</finalName>
 		<plugins>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.3.2</version>
+				<configuration>
+					<!-- <source>1.7</source> <target>1.7</target> -->
+					<showDeprecation>true</showDeprecation>
+					<showWarnings>true</showWarnings>
+					<executable>${env.JAVA_HOME_7}/bin/javac</executable>
+					<fork>true</fork>
+				</configuration>
 			</plugin>
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
@@ -86,7 +95,6 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -275,61 +283,26 @@
 			<artifactId>jboss-as-controller-client</artifactId>
 			<version>${version.jbossas7}</version>
 		</dependency>
-
-
 	</dependencies>
 
-	<profiles>
-		<profile>
-			<id>jee6</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<artifactId>maven-war-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>jee6</id>
-								<phase>package</phase>
-								<goals>
-									<goal>war</goal>
-								</goals>
-								<configuration>
-									<webappDirectory>${project.build.directory}/${project.build.finalName}-jee6</webappDirectory>
-									<classifier>jee6</classifier>
-									<packagingExcludes>WEB-INF/lib/javax.faces*</packagingExcludes>
-									<warSourceExcludes>WEB-INF/lib/javax.faces*</warSourceExcludes>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-		<profile>
-			<id>mojarra</id>
-			<build>
-				<plugins>
-					<plugin>
-						<artifactId>maven-war-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>mojarra</id>
-								<phase>package</phase>
-								<goals>
-									<goal>war</goal>
-								</goals>
-								<configuration>
-									<classifier>mojarra</classifier>
-									<packagingExcludes>WEB-INF/lib/myfaces-api-*,WEB-INF/lib/myfaces-impl-*,WEB-INF/lib/jsp-api*</packagingExcludes>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
+	 <profiles> <profile> <id>jee6</id> <activation> <activeByDefault>true</activeByDefault> 
+		<jdk>1.7</jdk> </activation> <build> <plugins> <plugin> <artifactId>maven-war-plugin</artifactId> 
+		<executions> <execution> <id>jee6</id> <phase>package</phase> <goals> <goal>war</goal> 
+		</goals> <configuration> <webappDirectory>${project.build.directory}/${project.build.finalName}-jee6</webappDirectory> 
+		<classifier>jee6</classifier> <packagingExcludes>WEB-INF/lib/javax.faces*</packagingExcludes> 
+		<warSourceExcludes>WEB-INF/lib/javax.faces*</warSourceExcludes> </configuration> 
+		</execution> </executions> </plugin> </plugins> </build> </profile> <profile> 
+		<id>mojarra</id> <activation> <activeByDefault>false</activeByDefault> <jdk>1.7</jdk> 
+		</activation> <build> <plugins> <plugin> <artifactId>maven-war-plugin</artifactId> 
+		<executions> <execution> <id>mojarra</id> <phase>package</phase> <goals> 
+		<goal>war</goal> </goals> <configuration> <classifier>mojarra</classifier> 
+		<packagingExcludes>WEB-INF/lib/myfaces-api-*,WEB-INF/lib/myfaces-impl-*,WEB-INF/lib/jsp-api*</packagingExcludes> 
+		</configuration> </execution> </executions> </plugin> </plugins> </build> 
+		</profile> </profiles>
+	<scm>
+		<connection>scm:git:git://github.com/psramkumar/rich-theme-roller</connection>
+		<developerConnection>scm:git:git://github.com/psramkumar/rich-theme-roller</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/psramkumar/rich-theme-roller</url>
+	</scm>
 </project>
