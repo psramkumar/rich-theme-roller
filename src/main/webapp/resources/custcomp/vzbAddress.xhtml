@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:composite="http://java.sun.com/jsf/composite"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<body>
+	<composite:interface>
+		<composite:attribute name="styleClass"/>
+	</composite:interface>
+	<composite:implementation>
+
+<div class="#{cc.attrs.styleClass} formObj Obj_address">
+   <h3>Address Fields:</h3>
+   <div class="formObj">
+      <label for="Street Address_1"> Street Address <span class="required_span">*</span></label>
+      <input type="text" class="text" id="Street Address_1" />
+      <input type="text" class="text" id="Street Address_2" />
+   </div>
+   <div class="formObj formObj_city">
+      <label for="City_One">City <span class="required_span">*</span></label>
+      <input type="text" class="text" id="City_One" />
+   </div>																	
+   <div class="formObj formObj_state">
+      <label for="State_One">State <span class="required_span">*</span></label>
+      <input type="text" class="text" id="State_One" maxlength="10"  />
+   </div>	
+   <div class="formObj formObj_zip">
+      <label for="ZIP_One">ZIP <span class="required_span">*</span></label>
+      <input type="text" class="text" id="ZIP_One" maxlength="10"  />
+   </div>	
+      <div class="formObj formObj_city">
+      <label for="City">City <span class="required_span">*</span></label>
+      <input type="text" class="text" id="City" />
+   </div>																	
+   <div class="formObj formObj_state">
+      <label for="State">State <span class="required_span">*</span></label>
+      <select name="state">
+         <option value="AL">AL</option>
+         <option value="AK">AK</option>
+         <option value="AZ">AZ</option>
+         <option value="AR">AR</option>
+         <option value="CA">CA</option>
+         <option value="CO">CO</option>
+         <option value="CT">CT</option>
+         <option value="DE">DE</option>
+         <option value="DC">DC</option>
+         <option value="FL">FL</option>
+         <option value="GA">GA</option>
+         <option value="HI">HI</option>
+         <option value="ID">ID</option>
+         <option value="IL">IL</option>
+         <option value="IN">IN</option>
+         <option value="IA">IA</option>
+         <option value="KS">KS</option>
+         <option value="KY">KY</option>
+         <option value="LA">LA</option>
+         <option value="ME">ME</option>
+         <option value="MD">MD</option>
+         <option value="MA">MA</option>
+         <option value="MI">MI</option>
+         <option value="MN">MN</option>
+         <option value="MS">MS</option>
+         <option value="MO">MO</option>
+         <option value="MT">MT</option>
+         <option value="NE">NE</option>
+         <option value="NV">NV</option>
+         <option value="NH">NH</option>
+         <option value="NJ">NJ</option>
+         <option value="NM">NM</option>
+         <option value="NY">NY</option>
+         <option value="NC">NC</option>
+         <option value="ND">ND</option>
+         <option value="OH">OH</option>
+         <option value="OK">OK</option>
+         <option value="OR">OR</option>
+         <option value="PA">PA</option>
+         <option value="RI">RI</option>
+         <option value="SC">SC</option>
+         <option value="SD">SD</option>
+         <option value="TN">TN</option>
+         <option value="TX">TX</option>
+         <option value="UT">UT</option>
+         <option value="VT">VT</option>
+         <option value="VA">VA</option>
+         <option value="WA">WA</option>
+         <option value="WV">WV</option>
+         <option value="WI">WI</option>
+         <option value="WY">WY</option>
+      </select>
+    </div>	
+    <div class="formObj formObj_zip">
+       <label for="ZIP Code">ZIP Code <span class="required_span">*</span></label>
+       <input type="text" class="text" id="ZIP Code" maxlength="10"  />
+    </div>	
+</div>
+
+
+	</composite:implementation>
+</body>
+</html>

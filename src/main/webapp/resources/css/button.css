@@ -1,0 +1,644 @@
+.vbButton-large{
+	height:32px; min-width: 90px;
+	background-image:url("../resources/images/buttons/button_mid_sprite1.gif");
+	font-size: 12px;
+	line-height: 16px;
+}
+.vbButton-medium{
+	height:21px; min-width: 70px;
+	background-image:url("../resources/images/buttons/button_mid_sprite2.gif");
+	font-size: 12px;
+	line-height: 12px;
+}
+.vbButton-small{
+	height:18px; min-width: 50px;
+	background-image:url("../resources/images/buttons/button_mid_sprite3.gif");
+	font-size: 11px;
+	line-height: 10px;
+}
+.vbButton{
+	border-radius: 6px; 
+	-webkit-border-radius: 6px; 
+	-moz-border-radius: 6px; 
+	-khtml-border-radius: 6px; 
+	border-style:none;
+	border-color:White;
+	border-width:thin;
+	text-align:center;
+	font-weight: bold;
+	background-repeat:repeat-x;
+	text-decoration: none;
+				
+}
+.vzButton-red{
+	background-color:Red;
+	background-position: left bottom;
+	color: #ffffff;
+	text-shadow: 0 1px Black;
+}
+.vzButton-blk{
+	background-color:Black;
+	background-position: left top;
+	color: #ffffff;
+	text-shadow: 0 1px Gery;
+}
+.vzButton-gry{
+	background-color:Gery;
+	background-position: left 60%;
+	color: #000000;
+	text-shadow: 0 1px White;
+}
+
+
+
+.button_wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+a.button_gray_large {
+    background: url("../resources/images/buttons/button_left.gif") no-repeat scroll 0 0 transparent;
+    color: #000000;
+    display: block;
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 16px;
+    padding-left: 15px;
+    text-decoration: none;
+    text-shadow: 0 1px #FFFFFF;
+}
+a.button_red_large {
+    background: url("../resources/images/buttons/button_left.gif") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 16px;
+    padding-left: 15px;
+    text-decoration: none;
+    text-shadow: 0 1px #000000;
+}
+a.button_black_large {
+    background: url("../resources/images/buttons/button_left.gif") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 16px;
+    padding-left: 15px;
+    text-decoration: none;
+    text-shadow: 0 1px #000000;
+}
+a.button_red_large span, a.button_black_large span, a.button_gray_large span {
+    background: url("../resources/images/buttons/button_right.gif") no-repeat scroll 100% 0 transparent;
+    display: block;
+    padding: 7px 15px 9px 0;
+}
+a.button_black_large:visited {
+    color: #FFFFFF;
+}
+a.button_black_large:hover {
+    background-position: 0 -32px;
+}
+a.button_black_large:hover span {
+    background-position: 100% -32px;
+}
+a.button_gray_large {
+    background-position: 0 -64px;
+}
+a.button_gray_large span {
+    background-position: 100% -64px;
+}
+a.button_gray_large:visited {
+    color: #000000;
+}
+a.button_gray_large:hover {
+    background-position: 0 -96px;
+}
+a.button_gray_large:hover span {
+    background-position: 100% -96px;
+}
+a.button_red_large {
+    background-position: 0 -128px;
+}
+a.button_red_large span {
+    background-position: 100% -128px;
+}
+a.button_red_large:visited {
+    color: #FFFFFF;
+}
+a.button_red_large:hover {
+    background-position: 0 -160px;
+}
+a.button_red_large:hover span {
+    background-position: 100% -160px;
+}
+a.button_red_medium {
+    background: url("../resources/images/buttons/button_red_medium_left.gif") no-repeat scroll left top transparent;
+    display: block;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    height: 21px;
+    line-height: 16px;
+    padding-left: 9px;
+    text-decoration: none;
+}
+a.button_red_medium:link, a.button_red_medium:visited, a.button_red_medium:active {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+a.button_red_medium span {
+    background: url("../resources/images/buttons/button_red_medium_right.gif") no-repeat scroll right top transparent;
+    display: block;
+    padding: 2px 9px 3px 0;
+}
+a.button_red_medium:hover {
+    background-position: left bottom;
+    text-decoration: none;
+}
+a.button_red_medium:hover span {
+    background-position: right bottom;
+}
+a.button_black_medium {
+    background: url("../resources/images/buttons/button_black_medium_left.gif") no-repeat scroll left top transparent;
+    display: block;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    height: 21px;
+    line-height: 16px;
+    padding-left: 9px;
+    text-decoration: none;
+}
+a.button_black_medium:link, a.button_black_medium:visited, a.button_black_medium:active {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+a.button_black_medium span {
+    background: url("../resources/images/buttons/button_black_medium_right.gif") no-repeat scroll right top transparent;
+    display: block;
+    padding: 2px 10px 3px 0;
+}
+a.button_black_medium:hover {
+    background-position: left bottom;
+    text-decoration: none;
+}
+a.button_black_medium:hover span {
+    background-position: right bottom;
+}
+a.button_gray_medium {
+    background: url("../resources/images/buttons/button_gray_medium_left.gif") no-repeat scroll left top transparent;
+    display: block;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    height: 21px;
+    line-height: 16px;
+    padding-left: 9px;
+    text-decoration: none;
+}
+a.button_gray_medium:link, a.button_gray_medium:visited, a.button_gray_medium:active {
+    color: #000000;
+    font-weight: bold;
+}
+a.button_gray_medium span {
+    background: url("../resources/images/buttons/button_gray_medium_right.gif") no-repeat scroll right top transparent;
+    display: block;
+    padding: 2px 9px 3px 0;
+}
+a.button_gray_medium:hover {
+    background-position: left bottom;
+    text-decoration: none;
+}
+a.button_gray_medium:hover span {
+    background-position: right bottom;
+}
+a.button_red_small {
+    background: url("../resources/images/buttons/button_red_small_left.gif") no-repeat scroll left top transparent;
+    display: block;
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+    height: 18px;
+    line-height: 12px;
+    padding-left: 5px;
+    text-decoration: none;
+}
+a.button_red_small:link, a.button_red_small:visited, a.button_red_small:active {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+a.button_red_small span {
+    background: url("../resources/images/buttons/button_red_small_right.gif") no-repeat scroll right top transparent;
+    display: block;
+    padding: 3px 4px 3px 0;
+}
+a.button_red_small:hover {
+    background-position: left bottom;
+    text-decoration: none;
+}
+a.button_red_small:hover span {
+    background-position: right bottom;
+}
+a.button_black_small {
+    background: url("../resources/images/buttons/button_black_small_left.gif") no-repeat scroll left top transparent;
+    display: block;
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+    height: 18px;
+    line-height: 12px;
+    padding-left: 5px;
+    text-decoration: none;
+}
+a.button_black_small:link, a.button_black_small:visited, a.button_black_small:active {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+a.button_black_small span {
+    background: url("../resources/images/buttons/button_black_small_right.gif") no-repeat scroll right top transparent;
+    display: block;
+    padding: 3px 4px 3px 0;
+}
+a.button_black_small:hover {
+    background-position: left bottom;
+    text-decoration: none;
+}
+a.button_black_small:hover span {
+    background-position: right bottom;
+}
+a.button_gray_small {
+    background: url("../resources/images/buttons/button_gray_small_left.gif") no-repeat scroll left top transparent;
+    display: block;
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+    height: 18px;
+    line-height: 12px;
+    padding-left: 5px;
+    text-decoration: none;
+}
+a.button_gray_small:link, a.button_gray_small:visited, a.button_gray_small:active {
+    color: #000000;
+    font-weight: bold;
+}
+a.button_gray_small span {
+    background: url("../resources/images/buttons/button_gray_small_right.gif") no-repeat scroll right top transparent;
+    display: block;
+    padding: 3px 4px 3px 0;
+}
+a.button_gray_small:hover {
+    background-position: left bottom;
+    text-decoration: none;
+}
+a.button_gray_small:hover span {
+    background-position: right bottom;
+}
+#button_input_red_large .left {
+    background: url("../resources/images/buttons/button_left_sprite1.gif") no-repeat scroll left -128px transparent;
+    float: left;
+    height: 32px;
+    width: 5px;
+}
+#button_input_red_large input {
+    background: url("../resources/images/buttons/button_mid_sprite1.gif") repeat-x scroll left -128px transparent;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    height: 32px;
+    margin: 0;
+    overflow: visible;
+    padding: 2px 10px 4px;
+    vertical-align: top;
+}
+#button_input_red_large .right {
+    background: url("../resources/images/buttons/button_right_sprite1.gif") no-repeat scroll right -128px transparent;
+    float: left;
+    height: 32px;
+    width: 5px;
+}
+#button_input_black_large .left {
+    background: url("../resources/images/buttons/button_left_sprite1.gif") no-repeat scroll left 0 transparent;
+    float: left;
+    height: 32px;
+    width: 5px;
+}
+#button_input_black_large input {
+    background: url("../resources/images/buttons/button_mid_sprite1.gif") repeat-x scroll left 0 transparent;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    height: 32px;
+    margin: 0;
+    overflow: visible;
+    padding: 2px 10px 4px;
+    vertical-align: top;
+}
+#button_input_black_large .right {
+    background: url("../resources/images/buttons/button_right_sprite1.gif") no-repeat scroll right 0 transparent;
+    float: left;
+    height: 32px;
+    width: 5px;
+}
+#button_input_gray_large .left {
+    background: url("../resources/images/buttons/button_left_sprite1.gif") no-repeat scroll left -64px transparent;
+    float: left;
+    height: 32px;
+    width: 5px;
+}
+#button_input_gray_large input {
+    background: url("../resources/images/buttons/button_mid_sprite1.gif") repeat-x scroll left -64px transparent;
+    border: medium none;
+    color: #000000;
+    cursor: pointer;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    height: 32px;
+    margin: 0;
+    overflow: visible;
+    padding: 2px 10px 4px;
+    vertical-align: top;
+}
+#button_input_gray_large .right {
+    background: url("../resources/images/buttons/button_right_sprite1.gif") no-repeat scroll right -64px transparent;
+    float: left;
+    height: 32px;
+    width: 5px;
+}
+#button_input_red_medium .left {
+    background: url("../resources/images/buttons/button_left_sprite2.gif") no-repeat scroll left -84px transparent;
+    float: left;
+    height: 21px;
+    width: 5px;
+}
+#button_input_red_medium input {
+    background: url("../resources/images/buttons/button_mid_sprite2.gif") repeat-x scroll left -84px transparent;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    height: 21px;
+    margin: 0;
+    overflow: visible;
+    padding: 2px 0 8px;
+    vertical-align: top;
+}
+#button_input_red_medium .right {
+    background: url("../resources/images/buttons/button_right_sprite2.gif") no-repeat scroll right -84px transparent;
+    float: left;
+    height: 21px;
+    width: 5px;
+}
+#button_input_black_medium .left {
+    background: url("../resources/images/buttons/button_left_sprite2.gif") no-repeat scroll left 0 transparent;
+    float: left;
+    height: 21px;
+    width: 5px;
+}
+#button_input_black_medium input {
+    background: url("../resources/images/buttons/button_mid_sprite2.gif") repeat-x scroll left 0 transparent;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    height: 21px;
+    margin: 0;
+    overflow: visible;
+    padding: 2px 0 8px;
+    vertical-align: top;
+}
+#button_input_black_medium .right {
+    background: url("../resources/images/buttons/button_right_sprite2.gif") no-repeat scroll right 0 transparent;
+    float: left;
+    height: 21px;
+    width: 5px;
+}
+#button_input_gray_medium .left {
+    background: url("../resources/images/buttons/button_left_sprite2.gif") no-repeat scroll left -42px transparent;
+    float: left;
+    height: 21px;
+    width: 5px;
+}
+#button_input_gray_medium input {
+    background: url("../resources/images/buttons/button_mid_sprite2.gif") repeat-x scroll left -42px transparent;
+    border: medium none;
+    color: #000000;
+    cursor: pointer;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    height: 21px;
+    margin: 0;
+    overflow: visible;
+    padding: 2px 0 8px;
+    vertical-align: top;
+}
+#button_input_gray_medium .right {
+    background: url("../resources/images/buttons/button_right_sprite2.gif") no-repeat scroll right -42px transparent;
+    float: left;
+    height: 21px;
+    width: 5px;
+}
+#button_input_red_small .left {
+    background: url("../resources/images/buttons/button_left_sprite3.gif") no-repeat scroll left -72px transparent;
+    float: left;
+    height: 18px;
+    width: 5px;
+}
+#button_input_red_small input {
+    background: url("../resources/images/buttons/button_mid_sprite3.gif") repeat-x scroll left -72px transparent;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    height: 18px;
+    margin: 0;
+    overflow: visible;
+    padding: 0 0 2px;
+    vertical-align: top;
+}
+#button_input_red_small .right {
+    background: url("../resources/images/buttons/button_right_sprite3.gif") no-repeat scroll right -72px transparent;
+    float: left;
+    height: 18px;
+    width: 5px;
+}
+#button_input_black_small .left {
+    background: url("../resources/images/buttons/button_left_sprite3.gif") no-repeat scroll left 0 transparent;
+    float: left;
+    height: 18px;
+    width: 5px;
+}
+#button_input_black_small input {
+    background: url("../resources/images/buttons/button_mid_sprite3.gif") repeat-x scroll left 0 transparent;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    height: 18px;
+    margin: 0;
+    overflow: visible;
+    padding: 0 0 2px;
+    vertical-align: top;
+}
+#button_input_black_small .right {
+    background: url("../resources/images/buttons/button_right_sprite3.gif") no-repeat scroll right 0 transparent;
+    float: left;
+    height: 18px;
+    width: 5px;
+}
+#button_input_gray_small .left {
+    background: url("../resources/images/buttons/button_left_sprite3.gif") no-repeat scroll left -36px transparent;
+    float: left;
+    height: 18px;
+    width: 5px;
+}
+#button_input_gray_small input {
+    background: url("../resources/images/buttons/button_mid_sprite3.gif") repeat-x scroll left -36px transparent;
+    border: medium none;
+    color: #000000;
+    cursor: pointer;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    height: 18px;
+    margin: 0;
+    overflow: visible;
+    padding: 0 0 2px;
+    vertical-align: top;
+}
+#button_input_gray_small .right {
+    background: url("../resources/images/buttons/button_right_sprite3.gif") no-repeat scroll right -36px transparent;
+    float: left;
+    height: 18px;
+    width: 5px;
+}
+#button_input_red_medium, #button_input_black_medium, #button_input_gray_medium, #button_input_red_small, #button_input_black_small, #button_input_gray_small {
+    float: left;
+    padding-bottom: 10px;
+}
+a.button_red_large.disabled, a.button_black_large.disabled, a.button_red_medium.disabled, a.button_black_medium.disabled, a.button_red_small.disabled, a.button_black_small.disabled {
+    color: #AAAAAA;
+    cursor: default;
+    opacity: 0.5;
+}
+a.button_gray_large.disabled, a.button_gray_medium.disabled, a.button_gray_small.disabled {
+    color: #888888;
+    cursor: default;
+    opacity: 0.5;
+}
+a.button_red_large.disabled:hover {
+    background-position: 0 -128px;
+    text-decoration: none;
+}
+a.button_red_large.disabled span:hover {
+    background-position: 100% -128px;
+    text-decoration: none;
+}
+a.button_black_large.disabled:hover {
+    background-position: 0 0;
+    text-decoration: none;
+}
+a.button_black_large.disabled span:hover {
+    background-position: 100% 0;
+    text-decoration: none;
+}
+a.button_gray_large.disabled:hover {
+    background-position: 0 -64px;
+    text-decoration: none;
+}
+a.button_gray_large.disabled span:hover {
+    background-position: 100% -64px;
+    text-decoration: none;
+}
+a.button_red_medium.disabled:hover {
+    background-position: 0 0;
+    text-decoration: none;
+}
+a.button_red_medium.disabled span:hover {
+    background-position: 100% 0;
+    text-decoration: none;
+}
+a.button_black_medium.disabled:hover {
+    background-position: 0 0;
+    text-decoration: none;
+}
+a.button_black_medium.disabled span:hover {
+    background-position: 100% 0;
+    text-decoration: none;
+}
+a.button_gray_medium.disabled:hover {
+    background-position: 0 0;
+    text-decoration: none;
+}
+a.button_gray_medium.disabled span:hover {
+    background-position: 100% 0;
+    text-decoration: none;
+}
+a.button_red_small.disabled:hover {
+    background-position: 0 0;
+    text-decoration: none;
+}
+a.button_red_small.disabled span:hover {
+    background-position: 100% 0;
+    text-decoration: none;
+}
+a.button_black_small.disabled:hover {
+    background-position: 0 0;
+    text-decoration: none;
+}
+a.button_black_small.disabled span:hover {
+    background-position: 100% 0;
+    text-decoration: none;
+}
+a.button_gray_small.disabled:hover {
+    background-position: 0 0;
+    text-decoration: none;
+}
+a.button_gray_small.disabled span:hover {
+    background-position: 100% 0;
+    text-decoration: none;
+}
+#button_input_red_large.disabled, #button_input_black_large.disabled, #button_input_gray_large.disabled, #button_input_red_medium.disabled, #button_input_black_medium.disabled, #button_input_gray_medium.disabled, #button_input_red_small.disabled, #button_input_black_small.disabled, #button_input_gray_small.disabled {
+    color: #AAAAAA;
+    cursor: default;
+    opacity: 0.5;
+}
+#button_input_red_large.disabled input, #button_input_black_large.disabled input, #button_input_red_medium.disabled input, #button_input_black_medium.disabled input, #button_input_red_small.disabled input, #button_input_black_small.disabled input {
+    color: #AAAAAA;
+    cursor: default;
+}
+#button_input_gray_large.disabled input, #button_input_gray_medium.disabled input, #button_input_gray_small.disabled input {
+    color: #888888;
+    cursor: default;
+}

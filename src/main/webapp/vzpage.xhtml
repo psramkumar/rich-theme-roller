@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich"
+      xmlns:s="http://jboss.com/products/seam/taglib"
+      xmlns:vzb="http://java.sun.com/jsf/composite/custcomp">
+
+    <f:view>
+        <ui:composition template="/templates/template.xhtml">
+			
+            <ui:define name="title">RichFaces Sample</ui:define>
+			<ui:define name="header">
+				<h:outputStylesheet name="accordion.css" library="css"  />
+				<h:outputStylesheet name="button.css" library="css" />
+				<h:outputStylesheet name="formelement.css" library="css" />
+			</ui:define>
+            <ui:define name="body">
+                <h:form id="form">
+                    <rich:panel header="Verizon Button Styles">
+		                  <h:panelGrid columns="3">
+		                    <h:commandButton value="Verizon" title="Large Black" styleClass="vbButton vbButton-large vzButton-blk" />
+		                    <h:commandButton value="Button" title="Large Red" styleClass="vbButton vbButton-large vzButton-red" />
+		                    <h:commandButton value="Button" title="Large Grey" styleClass="vbButton vbButton-large vzButton-gry"  />
+	                    	
+	                    	<h:commandButton value="Button" title="Medium Black" styleClass="vbButton vbButton-medium vzButton-blk" />
+		                    <h:commandButton value="Verizon" title="Medium Red" styleClass="vbButton vbButton-medium vzButton-red" />
+		                    <h:commandButton value="Button" title="Medium Grey" styleClass="vbButton vbButton-medium vzButton-gry"  />
+	                    	
+	                    	<h:commandButton value="Button" title="Small Black" styleClass="vbButton vbButton-small vzButton-blk" />
+		                    <h:commandButton value="Button" title="Small Red" styleClass="vbButton vbButton-small vzButton-red" />
+		                    <h:commandButton value="Verizon" title="Small Grey" styleClass="vbButton vbButton-small vzButton-gry"  />
+		                </h:panelGrid> 
+		                <h:panelGrid columns="3" >
+		                	<h:commandLink styleClass="button_black_large" ><span>Verizon</span></h:commandLink>
+		                    <h:commandLink styleClass="button_red_large" ><span>Button</span></h:commandLink>
+		                    <h:commandLink styleClass="button_gray_large" ><span>Button</span></h:commandLink>
+		                    
+		                    <h:commandLink styleClass="button_black_medium" ><span>Button</span></h:commandLink>
+		                    <h:commandLink styleClass="button_red_medium" ><span>Verizon</span></h:commandLink>
+		                    <h:commandLink styleClass="button_gray_medium" ><span>Button</span></h:commandLink>
+	                    
+	                    	<h:commandLink styleClass="button_black_small" ><span>Button</span></h:commandLink>
+		                    <h:commandLink styleClass="button_red_small" ><span>Button</span></h:commandLink>
+		                    <h:commandLink styleClass="button_gray_small" ><span>Verizon</span></h:commandLink>
+	                    </h:panelGrid>
+	                    
+                    </rich:panel>
+				<h:form id="userProfileForm">
+					<rich:panel header="Vesizon Style FormElements">
+						<h:panelGroup>
+							<h:panelGrid border="1">
+									<h:panelGrid columns="2" cellpadding="0" cellspacing="0">
+										<h:panelGrid cellpadding="0" cellspacing="0">
+											<h:panelGrid columns="2"><h:outputText value="FirstName" style="font-weight: bold;"/><s:span style="color:red; font-weight: bold;">*</s:span></h:panelGrid>
+											<h:inputText id="txtName" value="" label="FirstName" required="false" />
+										</h:panelGrid>
+										<h:panelGrid cellpadding="0" cellspacing="0">
+											<h:panelGrid columns="2"><h:outputText value="LastName" style="font-weight: bold;"/><s:span style="color:red; font-weight: bold;">*</s:span></h:panelGrid>
+											<h:inputText value="#" required="true" />
+										</h:panelGrid>
+									</h:panelGrid>
+									<h:panelGrid columns="2" style="margin-left:50%;">
+										<a4j:commandLink action="#" styleClass="button_black_medium">
+											<span>Cancel</span>
+										</a4j:commandLink>
+										<a4j:commandLink action="#" styleClass="button_red_medium">
+											<span>Submit</span>
+										</a4j:commandLink>
+									</h:panelGrid>
+							</h:panelGrid>
+						</h:panelGroup>
+					</rich:panel>
+				</h:form>
+
+				<!-- <vzb:vzbAddress/>
+                    <vzb:vzbButton color="black" value="Ramkumar" type="medium"/>
+                    <h:commandButton value="Ramkumar" image="/resources/images/buttons/vz_btn_lrg_red.png" 
+                    label="Ramkumar"
+                    style="COLOR: #ffffff; height : 27px; width: 90px"/>
+                     <h:commandButton value="Ramkumar" image="/resources/images/buttons/vz_btn_lrg_gry.png" 
+                    label="Ramkumar"
+                    style="COLOR: #ffffff; height : 27px; width: 90px"/> -->
+                </h:form>
+            </ui:define>
+        </ui:composition>
+    </f:view>
+</html>

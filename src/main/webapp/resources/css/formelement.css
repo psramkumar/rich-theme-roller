@@ -1,0 +1,226 @@
+
+.site_registration_form {
+    left: 10px;
+    position: relative;
+}
+.site_registration_form {
+    float: left;
+    width: 100%;
+}
+.site_registration_form_left {
+    border-right: 1px dashed #C0C0C0;
+    float: left;
+    padding-right: 1.5%;
+    width: 48%;
+}
+.site_registration_form_right {
+    float: left;
+    padding-left: 1.5%;
+    width: 48%;
+}
+.required_span {
+    color: #FF0000;
+    font-size: 14px;
+}
+.form_elements_objects input.text, .form_elements_objects textarea.text, .form_elements_objects select {
+    color: #000000;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    margin: 0;
+    padding: 2px;
+    width: 99%;
+}
+.formObj {
+    float: left;
+    padding-bottom: 10px;
+    width: 48%;
+}
+.formObj_left {
+    float: left;
+    width: 48%;
+}
+.formObj_right {
+    float: left;
+    padding-left: 3%;
+    width: 48%;
+}
+.formObj label {
+    float: left;
+    font-size: 12px;
+    padding-bottom: 8px;
+    text-align: left;
+}
+.phone_inputs {
+    float: left;
+    width: 100%;
+}
+.form_elements_objects .phone_inputs input {
+    margin-right: 10px;
+    width: 35px;
+}
+.form_elements_objects {
+    float: left;
+    padding-bottom: 15px;
+    width: 100%;
+}
+.form_elements_objects em {
+    color: #B2B2B2;
+    float: left;
+    font-size: 12px;
+    padding-bottom: 5px;
+    width: 100%;
+}
+.dotted_bottom {
+    border-bottom: 1px dashed #CCCCCC;
+    float: left;
+    height: 1px;
+    padding-top: 5px;
+    width: 100%;
+}
+.site_registration_search_button {
+    float: right;
+}
+.greyBtn_lrg {
+    background: url("../../images/site-registration/btn_gry.png") repeat-x scroll 0 0 transparent;
+    border: 1px solid #888888;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 1px 1px 2px #888888;
+    color: #333333 !important;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    height: 21px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-top: 3px;
+    text-align: center;
+    text-decoration: none !important;
+    text-shadow: 0 1px #FFFFFF;
+    width: 75px;
+}
+.no_padding {
+    padding: 0;
+}
+.form_elements_objects .set {
+    float: left;
+}
+.form_elements_objects .set label {
+    font-weight: normal;
+    padding-left: 5px;
+}
+.form_elements_objects .set input {
+    border: medium none;
+    float: left;
+    margin: 0;
+}
+.input_radio {
+    width: 100%;
+}
+.formObj_radio_yes {
+    float: left;
+}
+.right_Obj {
+    float: right;
+}
+select {
+    height: 21px;
+}
+.Obj_position {
+    margin-bottom: 35px;
+    position: relative;
+}
+.input_outer {
+    bottom: 10px;
+    right: 0;
+}
+.set label {
+    width: 50px;
+}
+.phone_inputs span {
+    float: left;
+    position: relative;
+}
+.phone_inputs span small {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+.form_elements_objects input {
+    float: left;
+}
+.phone_inputs select {
+    margin-right: 10px;
+    width: 58px;
+}
+.Obj_position small {
+    bottom: -10px;
+    color: #FF0000;
+    font-size: 11px;
+    font-weight: bold;
+    left: 0;
+    position: absolute;
+}
+textarea {
+    margin: 0;
+}
+.phone_inputs select.calendar_month {
+    width: 40px;
+}
+#datepicker {
+    float: left;
+    height: 16px;
+    width: 115px;
+}
+.maincolumn .formObj h3 {
+    color: #FF0000;
+    text-align: left;
+}
+.form_elements_objects .Obj_address input {
+    margin-bottom: 10px;
+}
+.Obj_address .formObj {
+    padding-bottom: 0;
+    width: 100%;
+}
+.formObj_city {
+    width: 45% !important;
+}
+.formObj_state {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 25% !important;
+}
+.formObj_state_select {
+    padding-left: 5%;
+    padding-right: 2%;
+    width: 28% !important;
+}
+.formObj_zip {
+    width: 19% !important;
+}
+.form_elements_objects .Obj_address {
+    border: 1px solid #CCCCCC;
+    margin-top: 5px;
+    padding: 10px 2% 8px;
+    width: 44%;
+}
+.maincolumn .content_intro .form_elements_code_sample {
+    float: left !important;
+    height: 480px !important;
+    margin: 10px 0 20px !important;
+    width: 500px !important;
+}
+* + html .form_elements_objects .set input {
+    position: relative;
+    top: -3px;
+}
+.form_elements_objects .set input {
+}
+* + html .Obj_address .formObj {
+    padding-bottom: 10px;
+}
+.maincolumn .content_intro img {
+    cursor: pointer;
+    float: left !important;
+    margin: 0 0 0 5px !important;
+}

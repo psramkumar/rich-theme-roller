@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:composite="http://java.sun.com/jsf/composite"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<body>
+	<composite:interface>
+		<composite:attribute name="value" required="true" />
+		<!-- displayText -->
+		<composite:attribute name="type" required="true" />
+		<!-- small, medium, large -->
+		<composite:attribute name="color" required="true" />
+		<!-- black, red, grey -->
+		<composite:attribute name="display" default="true" />
+		<!-- true or false -->
+	</composite:interface>
+	<composite:implementation>
+		<ui:fragment rendered="#{cc.attrs.type=='large'}">
+			<ui:fragment rendered="#{cc.attrs.color=='red'}">
+				<div id="button_input_red_large" class="button_state_red_1">
+					<div class="left button_state"></div>
+					<input class="button_state" id="myinput" type="submit"
+						onmouseover="buttonState.buttonOver('button_state_red_1', 3)"
+						onmouseout="buttonState.buttonOut('button_state_red_1',3)"
+						value="#{cc.attrs.value}" title="#{cc.attrs.value}" />
+					<div class="right button_state"></div>
+				</div>
+			</ui:fragment>
+			<ui:fragment rendered="#{cc.attrs.color=='black'}">
+				<div id="button_input_black_large" class="button_state_black_1">
+					<div class="left button_state"></div>
+					<input class="button_state" id="myinput" type="submit"
+						onmouseover="buttonState.buttonOver('button_state_black_1', 1)"
+						onmouseout="buttonState.buttonOut('button_state_black_1',1)"
+						value="#{cc.attrs.value}" title="#{cc.attrs.value}" />
+					<div class="right button_state"></div>
+				</div>
+			</ui:fragment>
+			<ui:fragment rendered="#{cc.attrs.color=='grey'}">
+				<div id="button_input_gray_large" class="button_state_gray_1">
+					<div class="left button_state"></div>
+					<input class="button_state" id="myinput" type="submit"
+						onmouseover="buttonState.buttonOver('button_state_gray_1', 2)"
+						onmouseout="buttonState.buttonOut('button_state_gray_1',2)"
+						value="#{cc.attrs.value}" title="#{cc.attrs.value}" />
+					<div class="right button_state"></div>
+				</div>
+			</ui:fragment>
+		</ui:fragment>
+		<!--Buttons Medium-->
+		<ui:fragment rendered="#{cc.attrs.type=='medium'}">
+			<ui:fragment rendered="#{cc.attrs.color=='red'}">
+				<div id="button_input_red_medium" class="button_state_red_2">
+					<div class="left button_state"></div>
+					<input class="button_state" id="myinput" type="submit"
+						onmouseover="buttonState.buttonOver('button_state_red_2', 3)"
+						onmouseout="buttonState.buttonOut('button_state_red_2',3)"
+						value="#{cc.attrs.value}" title="#{cc.attrs.value}" />
+					<div class="right button_state" />
+				</div>
+			</ui:fragment>
+			<ui:fragment rendered="#{cc.attrs.color=='black'}">
+				<div id="button_input_black_medium" class="button_state_black_2">
+					<div class="left button_state"></div>
+					<input class="button_state" id="myinput" type="submit"
+						onmouseover="buttonState.buttonOver('button_state_black_2', 1)"
+						onmouseout="buttonState.buttonOut('button_state_black_2',1)"
+						value="#{cc.attrs.value}" title="#{cc.attrs.value}" />
+					<div class="right button_state"></div>
+				</div>
+			</ui:fragment>
+			<ui:fragment rendered="#{cc.attrs.color=='grey'}">
+				<div id="button_input_gray_medium" class="button_state_gray_2">
+					<div class="left button_state"></div>
+					<input class="button_state" id="myinput" type="submit"
+						onmouseover="buttonState.buttonOver('button_state_gray_2', 2)"
+						onmouseout="buttonState.buttonOut('button_state_gray_2',2)"
+						value="#{cc.attrs.value}" title="#{cc.attrs.value}" />
+					<div class="right button_state"></div>
+				</div>
+			</ui:fragment>
+		</ui:fragment>
+		<!--Buttons Small-->
+		<ui:fragment rendered="#{cc.attrs.type=='small'}">
+			<ui:fragment rendered="#{cc.attrs.color=='red'}">
+				<div id="button_input_red_small" class="button_state_red_3">
+					<div class="left button_state"></div>
+					<input class="button_state" id="myinput" type="submit"
+						onmouseover="buttonState.buttonOver('button_state_red_3', 3)"
+						onmouseout="buttonState.buttonOut('button_state_red_3',3)"
+						value="#{cc.attrs.value}" title="#{cc.attrs.value}" />
+					<div class="right button_state"></div>
+				</div>
+			</ui:fragment>
+			<ui:fragment rendered="#{cc.attrs.color=='black'}">
+				<div id="button_input_black_small" class="button_state_black_3">
+					<div class="left button_state"></div>
+					<input class="button_state" id="myinput" type="submit"
+						onmouseover="buttonState.buttonOver('button_state_black_3', 1)"
+						onmouseout="buttonState.buttonOut('button_state_black_3',1)"
+						value="#{cc.attrs.value}" title="#{cc.attrs.value}" />
+					<div class="right button_state"></div>
+				</div>
+			</ui:fragment>
+			<ui:fragment rendered="#{cc.attrs.color=='grey'}">
+				<div id="button_input_gray_small" class="button_state_gray_3">
+					<div class="left button_state"></div>
+					<input class="button_state" id="myinput" type="submit"
+						onmouseover="buttonState.buttonOver('button_state_gray_3', 2)"
+						onmouseout="buttonState.buttonOut('button_state_gray_3',2)"
+						value="#{cc.attrs.value}" title="#{cc.attrs.value}" />
+					<div class="right button_state"></div>
+				</div>
+			</ui:fragment>
+		</ui:fragment>
+	</composite:implementation>
+</body>
+</html>
+
