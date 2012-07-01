@@ -5,7 +5,6 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:a4j="http://richfaces.org/a4j"
       xmlns:rich="http://richfaces.org/rich"
-      xmlns:s="http://jboss.com/products/seam/taglib"
       xmlns:vzb="http://java.sun.com/jsf/composite/custcomp">
 
     <f:view>
@@ -16,6 +15,18 @@
 				<h:outputStylesheet name="accordion.css" library="css"  />
 				<h:outputStylesheet name="button.css" library="css" />
 				<h:outputStylesheet name="formelement.css" library="css" />
+				<h:outputStylesheet>
+				.acc-expand-bkg {
+					 background-color: #E5E4E5;
+					 background-image: url(data:image/gif;base64,R0lGODlhBAAEAJEAAOfk59nX2czIzOXk5SH5BAAAAAAALAAAAAAEAAQAAAIHxCQzEaisCgA7);
+					background-repeat: repeat;
+					 background-position: 0 0;
+					 -moz-box-shadow: inset -5px 5px 5px #888,inset 0 -5px 5px #888;
+					-webkit-box-shadow: inset 0 5px 5px #888,inset 0 -5px 5px #888;
+					 box-shadow: inset 0 -3px 8px #888,inset 0 3px 8px #888;
+				}
+				
+				</h:outputStylesheet>
 			</ui:define>
             <ui:define name="body">
                 <h:form id="form">
@@ -49,16 +60,16 @@
 	                    
                     </rich:panel>
 				<h:form id="userProfileForm">
-					<rich:panel header="Vesizon Style FormElements">
+					<rich:panel header="Vesizon Style FormElements"  styleClass="acc-expand-bkg">
 						<h:panelGroup>
-							<h:panelGrid border="1">
+							<h:panelGrid style="border: solid thin #cococo">
 									<h:panelGrid columns="2" cellpadding="0" cellspacing="0">
 										<h:panelGrid cellpadding="0" cellspacing="0">
-											<h:panelGrid columns="2"><h:outputText value="FirstName" style="font-weight: bold;"/><s:span style="color:red; font-weight: bold;">*</s:span></h:panelGrid>
+											<h:panelGrid columns="2"><h:outputText value="FirstName" style="font-weight: bold;"/><span style="color:red; font-weight: bold;">*</span></h:panelGrid>
 											<h:inputText id="txtName" value="" label="FirstName" required="false" />
 										</h:panelGrid>
 										<h:panelGrid cellpadding="0" cellspacing="0">
-											<h:panelGrid columns="2"><h:outputText value="LastName" style="font-weight: bold;"/><s:span style="color:red; font-weight: bold;">*</s:span></h:panelGrid>
+											<h:panelGrid columns="2"><h:outputText value="LastName" style="font-weight: bold;"/><span style="color:red; font-weight: bold;">*</span></h:panelGrid>
 											<h:inputText value="#" required="true" />
 										</h:panelGrid>
 									</h:panelGrid>
