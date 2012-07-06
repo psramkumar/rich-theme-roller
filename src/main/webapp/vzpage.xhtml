@@ -16,7 +16,7 @@
 				<h:outputStylesheet name="button.css" library="css" />
 				<h:outputStylesheet name="formelement.css" library="css" />
 				<h:outputStylesheet>
-				.acc-expand-bkg {
+				.acc-expand-bkgs {
 					 background-color: #E5E4E5;
 					 background-image: url(data:image/gif;base64,R0lGODlhBAAEAJEAAOfk59nX2czIzOXk5SH5BAAAAAAALAAAAAAEAAQAAAIHxCQzEaisCgA7);
 					background-repeat: repeat;
@@ -26,11 +26,25 @@
 					 box-shadow: inset 0 -3px 8px #888,inset 0 3px 8px #888;
 				}
 				
+				.text-text-area {background: url(data:image/gif;base64,R0lGODlhBADIAKIAAObm5/r6+vDw8evr7OHh4vX19f///wAAACH5BAAAAAAALAAAAAAEAMgAAAMpSErQMHCIKYotIQfDu/9gKI5kaZ5oqq5s675wLM90bd94ru987//AXgIAOw==) repeat-x scroll left top #FFFFFF;border: 1px solid #CCCCCC; color: #000000;font-size: 12px; padding-left: 2px;}
+				.required_span {color: #FF0000; font-size: 14px;}
+				.item_label{font-weight: bold; float:left; text-align:left; width:100%;}
+				.phone_input {margin-right: 10px;width: 35px;}
+				
+				.input_visible{ display: inline; width: 164px;}
+				.input_visible{ height:16px;}
+				.Obj_position{ position:relative; margin-bottom: 35px;}
+				.input_outer{background: url("/resources/images/buttons/browse-bg.png") no-repeat scroll left center;display: inline;height: 22px;overflow: hidden; position: absolute;width: 65px; right:0px; top:23px;}
+				.input_file_inner{display: inline; height:15px; margin-left: 0px;opacity: 0px; position: relative; width: 164px;}
+				.Obj_position small {bottom: -10px;color: #FF0000;font-size: 11px;font-weight: bold;left: 0px; position: absolute;}
+				.celendar_icon{background-image: url()
+								
 				</h:outputStylesheet>
 			</ui:define>
             <ui:define name="body">
                 <h:form id="form">
                     <rich:panel header="Verizon Button Styles">
+		                <h:outputText value="Button type"/>
 		                  <h:panelGrid columns="3">
 		                    <h:commandButton value="Verizon" title="Large Black" styleClass="vbButton vbButton-large vzButton-blk" />
 		                    <h:commandButton value="Button" title="Large Red" styleClass="vbButton vbButton-large vzButton-red" />
@@ -44,6 +58,7 @@
 		                    <h:commandButton value="Button" title="Small Red" styleClass="vbButton vbButton-small vzButton-red" />
 		                    <h:commandButton value="Verizon" title="Small Grey" styleClass="vbButton vbButton-small vzButton-gry"  />
 		                </h:panelGrid> 
+		                <h:outputText value="Anchor Type"/>
 		                <h:panelGrid columns="3" >
 		                	<h:commandLink styleClass="button_black_large" ><span>Verizon</span></h:commandLink>
 		                    <h:commandLink styleClass="button_red_large" ><span>Button</span></h:commandLink>
@@ -59,20 +74,91 @@
 	                    </h:panelGrid>
 	                    
                     </rich:panel>
+                </h:form>
 				<h:form id="userProfileForm">
 					<rich:panel header="Vesizon Style FormElements"  styleClass="acc-expand-bkg">
 						<h:panelGroup>
 							<h:panelGrid style="border: solid thin #cococo">
 									<h:panelGrid columns="2" cellpadding="0" cellspacing="0">
 										<h:panelGrid cellpadding="0" cellspacing="0">
-											<h:panelGrid columns="2"><h:outputText value="FirstName" style="font-weight: bold;"/><span style="color:red; font-weight: bold;">*</span></h:panelGrid>
-											<h:inputText id="txtName" value="" label="FirstName" required="false" />
+											<h:panelGrid columns="2"><h:outputText value="FirstName"  styleClass="item_label"/><span class="required_span">*</span></h:panelGrid>
+											<h:inputText id="txtName" value="" required="true" styleClass="text-text-area">
+											  	<f:validateLength minimum="3" maximum="12" for="txtName"/>
+											  	<f:validateRequired for="txtName"/>
+											  	<h:message for="txtName" errorClass="error"/>
+											</h:inputText>
+											
 										</h:panelGrid>
 										<h:panelGrid cellpadding="0" cellspacing="0">
-											<h:panelGrid columns="2"><h:outputText value="LastName" style="font-weight: bold;"/><span style="color:red; font-weight: bold;">*</span></h:panelGrid>
-											<h:inputText value="#" required="true" />
+											<h:panelGrid columns="2"><h:outputText value="LastName" styleClass="item_label"/><span class="required_span">*</span></h:panelGrid>
+											<h:inputText value="#" required="true" styleClass="text-text-area"/>
 										</h:panelGrid>
+										<h:panelGrid cellpadding="0" cellspacing="0">
+											<h:panelGrid columns="2"><h:outputText value="SelectDomain"  styleClass="item_label"/><span class="required_span">*</span></h:panelGrid>
+											<h:selectOneMenu style="width:135px; height:19px;">
+												 <f:selectItem itemValue="0" itemLabel="Option 1" />
+										         <f:selectItem itemValue="1" itemLabel="Option 2" />
+										         <f:selectItem itemValue="2" itemLabel="Option 3" />
+										         <f:selectItem itemValue="3" itemLabel="Option 4" />
+										         <f:selectItem itemValue="4" itemLabel="Option 5" />
+											</h:selectOneMenu>
+										</h:panelGrid>
+										
+										<h:panelGrid cellpadding="0" cellspacing="0">
+											<h:panelGrid columns="2"><h:outputText value="TextArea"  styleClass="item_label"/><span class="required_span">*</span></h:panelGrid>
+											<h:inputTextarea value="#" required="true" styleClass="text-text-area" rows="4" cols="30"/>
+										</h:panelGrid>
+										
+										<h:panelGrid cellpadding="0" cellspacing="0">
+											<h:panelGrid columns="2"><h:outputText value="Radio Buttons"  styleClass="item_label"/><span class="required_span">*</span></h:panelGrid>
+											<h:panelGrid columns="6">
+												<h:selectOneRadio value="">
+												 <f:selectItem itemValue="0" itemLabel="Radio 1" />
+										         <f:selectItem itemValue="1" itemLabel="Radio 2" />
+										         <f:selectItem itemValue="2" itemLabel="Radio 3" />
+												</h:selectOneRadio>
+											</h:panelGrid>
+										</h:panelGrid>
+										<h:panelGrid cellpadding="0" cellspacing="0">
+											<h:panelGrid columns="2"><h:outputText value="Check Boxs"  styleClass="item_label"/><span class="required_span">*</span></h:panelGrid>
+											<h:panelGrid columns="6">
+												<h:selectBooleanCheckbox value="One"/><h:outputText value="One" />
+												<h:selectBooleanCheckbox value="Two"/><h:outputText value="Two" />
+												<h:selectBooleanCheckbox value="Three"/><h:outputText value="Three" />
+											</h:panelGrid>
+										</h:panelGrid>
+										<h:panelGrid cellpadding="0" cellspacing="0">
+											<h:panelGrid columns="2"><h:outputText value="PhoneNumber"  styleClass="item_label"/><span class="required_span">*</span></h:panelGrid>
+											<h:panelGrid columns="3">
+												<h:inputText value="" required="false" styleClass="phone_input text-text-area"/>
+												<h:inputText value="" required="false" styleClass="phone_input text-text-area"/>
+												<h:inputText value="" required="false" styleClass="phone_input text-text-area"/>
+											</h:panelGrid>
+										</h:panelGrid>
+										<h:panelGrid cellpadding="0" cellspacing="0">
+											<h:panelGrid columns="2"><h:outputText value="DateofBirth"  styleClass="item_label"/><span class="required_span">*</span></h:panelGrid>
+											<h:panelGrid>
+												<rich:calendar buttonIcon="/resources/images/calendar.png" inputClass="text-text-area" />
+											</h:panelGrid>
+										</h:panelGrid>
+										
+										<!-- <h:panelGrid cellpadding="0" cellspacing="0">
+											<h:panelGrid columns="2"><h:outputText value="Upload File" styleClass="item_label"/><span class="required_span">*</span></h:panelGrid>
+											<h:panelGrid>
+   												<input class="input_file_inner text"  id="Input File" type="file" />
+   												<small>Please Upload a file</small>
+											</h:panelGrid>
+										</h:panelGrid> -->
+										
+										<h:panelGrid cellpadding="0" cellspacing="0">
+											<h:panelGrid columns="2"><h:outputText value="Suggested Box" styleClass="item_label"/><span class="required_span">*</span></h:panelGrid>
+											<h:panelGrid>
+   												<rich:autocomplete inputClass="text-text-area"/>
+											</h:panelGrid>
+										</h:panelGrid>
+										
 									</h:panelGrid>
+									
 									<h:panelGrid columns="2" style="margin-left:50%;">
 										<a4j:commandLink action="#" styleClass="button_black_medium">
 											<span>Cancel</span>
@@ -85,16 +171,6 @@
 						</h:panelGroup>
 					</rich:panel>
 				</h:form>
-
-				<!-- <vzb:vzbAddress/>
-                    <vzb:vzbButton color="black" value="Ramkumar" type="medium"/>
-                    <h:commandButton value="Ramkumar" image="/resources/images/buttons/vz_btn_lrg_red.png" 
-                    label="Ramkumar"
-                    style="COLOR: #ffffff; height : 27px; width: 90px"/>
-                     <h:commandButton value="Ramkumar" image="/resources/images/buttons/vz_btn_lrg_gry.png" 
-                    label="Ramkumar"
-                    style="COLOR: #ffffff; height : 27px; width: 90px"/> -->
-                </h:form>
             </ui:define>
         </ui:composition>
     </f:view>
