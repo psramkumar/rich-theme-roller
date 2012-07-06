@@ -38,6 +38,28 @@
 				.input_file_inner{display: inline; height:15px; margin-left: 0px;opacity: 0px; position: relative; width: 164px;}
 				.Obj_position small {bottom: -10px;color: #FF0000;font-size: 11px;font-weight: bold;left: 0px; position: absolute;}
 				.celendar_icon{background-image: url()
+				
+				.rf-tbp {
+	background-color: #141414;
+}
+
+.rich-tabhdr-side-border {
+	border: 1 px #FFFFFF;
+}
+
+.rich-tab-active {
+	color: #000000;
+	background-color: #141414;
+	border-color: #FFFFFF;
+	border: 1px;
+}
+
+.rf-tbp {
+	font-family: serif;
+	font-size: 22pt;
+	color:#FFFFFF;
+	background-color: #000000 ;
+}
 								
 				</h:outputStylesheet>
 			</ui:define>
@@ -138,7 +160,7 @@
 										<h:panelGrid cellpadding="0" cellspacing="0">
 											<h:panelGrid columns="2"><h:outputText value="DateofBirth"  styleClass="item_label"/><span class="required_span">*</span></h:panelGrid>
 											<h:panelGrid>
-												<rich:calendar buttonIcon="/resources/images/calendar.png" inputClass="text-text-area" />
+												<rich:calendar inputClass="text-text-area" />
 											</h:panelGrid>
 										</h:panelGrid>
 										
@@ -171,6 +193,22 @@
 						</h:panelGroup>
 					</rich:panel>
 				</h:form>
+				<rich:panel>
+				<rich:tabPanel selectedTab="TabName1" switchType="client">
+                      <rich:tab name="Verizon" label="Java">
+                          <!-- Tab content here -->
+                          <h:outputText value="Sample Text 1"/>
+                      </rich:tab>
+                      <rich:tab name="Oracle" label="J2EE">
+                          <!-- Tab content here -->
+                          <h:outputText value="Sample Text 2"/>
+                      </rich:tab>
+                      <rich:tab name="Apple" label="Java Server Faces">
+                          <!-- Tab content here -->
+                          <h:outputText value="Sample Text 3"/>
+                      </rich:tab>                      
+                  </rich:tabPanel>
+				</rich:panel>
             </ui:define>
         </ui:composition>
     </f:view>

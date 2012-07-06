@@ -285,20 +285,64 @@
 		</dependency>
 	</dependencies>
 
-	 <profiles> <profile> <id>jee6</id> <activation> <activeByDefault>true</activeByDefault> 
-		<jdk>1.7</jdk> </activation> <build> <plugins> <plugin> <artifactId>maven-war-plugin</artifactId> 
-		<executions> <execution> <id>jee6</id> <phase>package</phase> <goals> <goal>war</goal> 
-		</goals> <configuration> <webappDirectory>${project.build.directory}/${project.build.finalName}-jee6</webappDirectory> 
-		<classifier>jee6</classifier> <packagingExcludes>WEB-INF/lib/javax.faces*</packagingExcludes> 
-		<warSourceExcludes>WEB-INF/lib/javax.faces*</warSourceExcludes> </configuration> 
-		</execution> </executions> </plugin> </plugins> </build> </profile> <profile> 
-		<id>mojarra</id> <activation> <activeByDefault>false</activeByDefault> <jdk>1.7</jdk> 
-		</activation> <build> <plugins> <plugin> <artifactId>maven-war-plugin</artifactId> 
-		<executions> <execution> <id>mojarra</id> <phase>package</phase> <goals> 
-		<goal>war</goal> </goals> <configuration> <classifier>mojarra</classifier> 
-		<packagingExcludes>WEB-INF/lib/myfaces-api-*,WEB-INF/lib/myfaces-impl-*,WEB-INF/lib/jsp-api*</packagingExcludes> 
-		</configuration> </execution> </executions> </plugin> </plugins> </build> 
-		</profile> </profiles>
+	<profiles>
+		<profile>
+			<id>jee6</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+				<jdk>1.7</jdk>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-war-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>jee6</id>
+								<phase>package</phase>
+								<goals>
+									<goal>war</goal>
+								</goals>
+								<configuration>
+									<webappDirectory>${project.build.directory}/${project.build.finalName}-jee6</webappDirectory>
+									<classifier>jee6</classifier>
+									<packagingExcludes>WEB-INF/lib/javax.faces*</packagingExcludes>
+									<warSourceExcludes>WEB-INF/lib/javax.faces*</warSourceExcludes>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>mojarra</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+				<jdk>1.7</jdk>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-war-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>mojarra</id>
+								<phase>package</phase>
+								<goals>
+									<goal>war</goal>
+								</goals>
+								<configuration>
+									<classifier>mojarra</classifier>
+									<packagingExcludes>WEB-INF/lib/myfaces-api-*,WEB-INF/lib/myfaces-impl-*,WEB-INF/lib/jsp-api*</packagingExcludes>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 	<scm>
 		<connection>scm:git:git://github.com/psramkumar/rich-theme-roller</connection>
 		<developerConnection>scm:git:git://github.com/psramkumar/rich-theme-roller</developerConnection>
