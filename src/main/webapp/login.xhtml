@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a="http://richfaces.org/a4j">
+	<ui:composition template="/templates/template.xhtml">
+		<ui:define name="pageTitle">Login Page</ui:define>
+		<ui:define name="contentHeader"><h2>Login Page</h2></ui:define>
+		<ui:define name="breadNav">
+			<h:commandLink action="home" value="Home" />
+			<h:outputText value=" / " />
+			<h:commandLink action="login" value="Login" />
+		</ui:define>
+		<ui:define name="leftSide">displaying the Left Menu</ui:define>
+		<ui:define name="body">
+			<h:panelGroup id="loginPanel" layout="block" rendered="#{not identity.loggedIn}">
+				<h:form>
+					<h:panelGrid>
+						<h:messages id="loginErr" globalOnly="false" errorClass="error" warnClass="warn" infoClass="info" />
+					</h:panelGrid>
+					<h:panelGrid columns="2">
+						<h:outputLabel for="username" styleClass="item_label">Username:</h:outputLabel>
+						<h:inputText id="username" value="#{credentials.username}" label="Username" required="true"  styleClass="text-text-area" requiredMessage="UserName is Required" size="20"/>
+						<h:outputLabel for="password" styleClass="item_label">Password:</h:outputLabel>
+						<h:inputSecret id="password" value="#{credentials.password}" required="true"  styleClass="text-text-area" requiredMessage="Password is Required" size="20"/>
+						<h:outputText value="&nbsp;" />
+						<h:commandButton value="Login" title="Log Me In!" styleClass="vbButton vbButton-medium vzButton-red" action="#{identity.login}" oncomplete="document.location.href='home.seam'"/>
+					</h:panelGrid>
+				</h:form>
+			</h:panelGroup>
+		</ui:define>
+		<ui:define name="footer">
+	
+		</ui:define>
+	</ui:composition>
+</f:view>

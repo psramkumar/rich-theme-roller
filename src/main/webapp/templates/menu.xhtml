@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:vzb="http://java.sun.com/jsf/composite/custcomp">
+	<ui:composition>
+		<h:form id="menuform">
+			<rich:toolbar height="30px" itemSeparator="grid">
+				<rich:toolbarGroup location="left">
+					<div style="width: 160px"/>
+				</rich:toolbarGroup>
+				<rich:toolbarGroup location="left">
+					<rich:dropDownMenu mode="server" label="Left" title="Left">
+						<rich:menuItem submitMode="server" label="Registration" styleClass="rf-menuitem-lst-bg" action="register" onclick="document.location.href='registration.seam'"/>
+						<rich:menuItem submitMode="server" label="Cancel Order" styleClass="rf-menuitem-lst-bg" />
+					</rich:dropDownMenu>
+				</rich:toolbarGroup>
+				<rich:toolbarGroup location="right">
+					<rich:dropDownMenu mode="ajax" label="Right" title="Right">
+						<rich:menuItem submitMode="server" label="New Order" styleClass="rf-menuitem-lst-bg"/>
+						<rich:menuItem submitMode="server" label="Cancel Order" styleClass="rf-menuitem-lst-bg" />
+					</rich:dropDownMenu>
+				</rich:toolbarGroup>
+			</rich:toolbar>
+		</h:form>
+	</ui:composition>
+</f:view>

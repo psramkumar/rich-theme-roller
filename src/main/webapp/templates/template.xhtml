@@ -6,13 +6,78 @@
 	xmlns:a4j="http://richfaces.org/a4j">
 
 <h:head>
-	<title>RichFaces Application</title>
+	<title><ui:insert name="pageTitle"/></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<ui:insert name="header" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<ui:insert name="header" /> <!-- Insert aal your Style Sheet here    -->
+	<h:outputStylesheet>
+		.text-text-area {background: url(data:image/gif;base64,R0lGODlhBADIAKIAAObm5/r6+vDw8evr7OHh4vX19f///wAAACH5BAAAAAAALAAAAAAEAMgAAAMpSErQMHCIKYotIQfDu/9gKI5kaZ5oqq5s675wLM90bd94ru987//AXgIAOw==) repeat-x scroll left top #FFFFFF; border: 1px solid #CCCCCC; color: #000000;font-size: 12px; padding-left: 2px;}
+	</h:outputStylesheet>
 </h:head>
-
 <h:body>
-	<ui:insert name="body">Default content</ui:insert>
-	<ui:insert name="footer" />
+	<div id="mainContainer" class="bknd_white border_solid">
+		<div  id="globalHeader" style="clear: both;">
+			<ui:include src="globalHeader.xhtml" />
+		</div>
+		<div id="globalmenu" style="clear: both;">
+			<ui:include src="menu.xhtml" /> <!-- Main Menu -->
+		</div>
+		<div id="contentarea">
+			<h:form>
+				<p class="userlogin"><h:outputText value="Welcome "/> <h:outputText value="#{credentials.username} |" rendered="#{identity.loggedIn}"/> <h:outputText value="Guest " rendered="#{not identity.loggedIn}"/><h:commandLink action="home" value="Settings" rendered="#{identity.loggedIn}"/> | <h:commandLink action="home" value="Sign Out" rendered="#{identity.loggedIn}"/> <h:commandLink action="login" value="Sign in" rendered="#{not identity.loggedIn}"/></p>
+			</h:form>
+			<div id="breadCrumbs">
+				<h:form id="breadNav" title="Bread Crumbs">
+					 <p class="breadcrumb"><ui:insert name="breadNav"/></p><!-- Define the Page Navigation -->
+				</h:form>
+			</div>
+			<div id="content">
+				<div id="leftnav">
+					<div id="top"> <!-- Follow the same wqay for other Left Nav Headers -->
+		                  <h1><ui:insert name="sessionheader"/>Navigate Left</h1>
+		            </div>
+		            <div id="pagecontent" class="content">
+						<ui:insert name="leftNav"><ui:include src="leftnav.xhtml" /></ui:insert> <!-- Related Menu -->
+					</div>
+					<div id="bottom" />
+				</div>
+			</div>
+			<div id="maincontent">
+				<div id="middle_content">
+					<div id="maincontainer">
+						<div id="fillertop">
+							<div id="maincontenttop">
+								<div id="maincontenttop2">
+                        			<h1><ui:insert name="contentHeader"/></h1>
+                        		</div>
+							</div>
+						</div>
+						<div id="maincontentleft">
+							<div id="maincontentright">
+								<div id="pagecontent" class="content">
+									<ui:insert name="body">Default content</ui:insert> <!-- Real Content -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="fillerbottom">
+	                  	<div id="maincontentbottom">
+	                    	<div id="maincontentbottom2"/>
+	                  	</div>
+	                </div>
+				</div>
+			</div>
+		</div>
+		<div id="footer" style="width: 100%; clear: both;">
+			<ui:insert name="footer" /> <!-- Footer If any -->
+			<ui:include src="globalFooter.xhtml" />
+		</div>
+	</div>
+	<!-- Adding all the style sheets here; inorder to get the expected style to be applied -->
+	<h:outputStylesheet name="accordion.css" library="css" />
+	<h:outputStylesheet name="button.css" library="css" />
+	<h:outputStylesheet name="formelement.css" library="css" />
+	<h:outputStylesheet name="default.css" library="css" />
+	<h:outputStylesheet name="vzcustom.css" library="css" />
 </h:body>
 </html>

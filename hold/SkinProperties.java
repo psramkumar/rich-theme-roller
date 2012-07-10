@@ -1,9 +1,5 @@
 package com.triadic.ram;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map.Entry;
@@ -30,16 +26,12 @@ public class SkinProperties implements java.io.Serializable{
 	}
 	
 	public void init(){
-		try {
-			String url = "META-INF/skins/verizon.skin.properties";
-			URL path = this.getClass().getResource("SkinProperties.class");
-			String dPath= path.toString().replace("com/triadic/ram/SkinProperties.class", url).replace("file:/", "").replace("vfs:/", "");
-			System.out.println("Derived Path : "+dPath);
-			InputStream is = new FileInputStream(dPath);
-			env.load(is);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		//String url = "META-INF/skins/verizon.skin.properties";
+		//URL path = this.getClass().getResource("SkinProperties.class");
+		//String dPath= path.toString().replace("com/triadic/ram/SkinProperties.class", url).replace("file:/", "").replace("vfs:/", "");
+		//System.out.println("Derived Path : "+dPath);
+		//InputStream is = new FileInputStream(dPath);
+		//env.load(is);
 	}
 	
 	@PostConstruct 
