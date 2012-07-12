@@ -9,21 +9,31 @@
 		<navigation-case>
 			<from-outcome>home</from-outcome>
 			<to-view-id>/home.xhtml</to-view-id>
+			<redirect/>
 		</navigation-case>
 
 		<navigation-case>
 			<from-outcome>login</from-outcome>
 			<to-view-id>/login.xhtml</to-view-id>
+			<redirect/>
 		</navigation-case>
 
 		<navigation-case>
 			<from-outcome>vzpage</from-outcome>
 			<to-view-id>/vzpage.xhtml</to-view-id>
+			<redirect/>
 		</navigation-case>
 		
 		<navigation-case>
 			<from-outcome>register</from-outcome>
 			<to-view-id>/registration.xhtml</to-view-id>
+			<redirect/>
+		</navigation-case>
+		
+		<navigation-case>
+			<from-outcome>user</from-outcome>
+			<to-view-id>/userhome.xhtml</to-view-id>
+			<redirect/>
 		</navigation-case>
 	</navigation-rule>
 </faces-config>

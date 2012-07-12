@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:vzb="http://java.sun.com/jsf/composite/custcomp">
+	<ui:composition template="/templates/template.xhtml">
+	<ui:define name="header"> 
+		<h:outputStylesheet>
+			.vzpop-ups-title{
+				 background:#FFF url(/resources/images/modalpopup/pagetitle_bknd.gif) repeat-x;
+			}
+		</h:outputStylesheet>
+	</ui:define>
+		<ui:define name="pageTitle">System Users</ui:define>
+		<ui:define name="contentHeader"><h2>User HOme</h2></ui:define>
+		<ui:define name="breadNav">
+			<h:commandLink action="home" value="Home" />
+			<h:outputText value=" / " />
+			<h:commandLink action="register" value="UserHome" />
+		</ui:define>
+		<ui:define name="leftSide">displaying the Left Menu</ui:define>
+        <ui:define name="body">
+        	<h:form id="userForm">
+        		<rich:panel style="align:center;">
+        			<rich:dataTable id="dtable" value="#{userBean.list}" var="val" 
+        			width="auto" rows="10" rowKeyVar="vl" rowClasses="odd, even" 
+        			sortMode="single">
+	        			<rich:column sortBy="#{vl}">
+	        				<f:facet name="header">SerialNumber</f:facet>
+	        				<h:outputText value="#{vl}" />
+	        			</rich:column>
+	        			<rich:column width="auto" sortBy="#{val}">
+	        				<f:facet name="header">Generated UUID</f:facet>
+	        				<h:outputText value="#{val}" />
+	        			</rich:column>
+	        			<f:facet name="footer">
+	        				<rich:dataScroller for="dtable" fastControls="hide" />
+	        			</f:facet>
+        			</rich:dataTable>
+
+					<rich:fileUpload listHeight="20px" 
+						id="upload" acceptedTypes="jpg, gif, png, bmp"
+						ontyperejected="alert('Only JPG, GIF, PNG and BMP files are accepted');"
+						maxFilesQuantity="1"/>
+					<rich:select enableManualInput="true" showButton="false" 
+					itemClass="text-text-area" listClass="text-text-area" styleClass="text-text-area">
+						<f:selectItem itemValue="0" itemLabel="Option 1" />
+						<f:selectItem itemValue="1" itemLabel="Option 2" />
+						<f:selectItem itemValue="2" itemLabel="Option 3" />
+						<f:selectItem itemValue="3" itemLabel="Option 4" />
+						<f:selectItem itemValue="4" itemLabel="Option 5" />
+					</rich:select>
+
+					<rich:contextMenu target="dtable" mode="ajax">
+						<rich:menuItem label="View Details" id="detail" onclick="#{rich:component('popup')}.show(); return false;"/>
+						<rich:menuItem label="Edit" id="zin" />
+						<rich:menuItem label="Delete" id="zout" />
+					</rich:contextMenu>
+				</rich:panel>
+
+				<rich:popupPanel id="popup" modal="true" autosized="true" resizeable="false" headerClass="vzpop-ups-title">
+					<f:facet name="header">
+						<h:outputText value="Details" />
+					</f:facet>
+					<f:facet name="controls">
+						<h:commandLink value="X" onclick="#{rich:component('popup')}.hide(); return false;"/>
+					</f:facet>
+					<h:panelGrid columns="2" id="popupContent" columnClasses="col1, col2">
+						<h:outputText value="Vendor" styleClass="item_label"/>
+						<h:inputText style="border:solid 0.5px black; width: 10em" value="text" styleClass="text-text-area" />
+						<h:outputText value="Model" styleClass="item_label"/>
+						<h:inputText style="border:solid 0.5px black; width: 10em" value="#model" styleClass="text-text-area"/>
+					</h:panelGrid>
+					<br />
+					<a4j:commandLink onclick="#{rich:component('popup')}.hide(); return false;" styleClass="button_black_medium">
+						<span>Close</span>
+					</a4j:commandLink>
+				</rich:popupPanel>
+			</h:form>
+        </ui:define>
+
+	</ui:composition>
+</f:view>

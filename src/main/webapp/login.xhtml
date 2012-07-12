@@ -14,8 +14,9 @@
 			<h:outputText value=" / " />
 			<h:commandLink action="login" value="Login" />
 		</ui:define>
-		<ui:define name="leftSide">displaying the Left Menu</ui:define>
+		<ui:define name="leftNav">Login to Navigate</ui:define>
 		<ui:define name="body">
+		<div align="center">
 			<h:panelGroup id="loginPanel" layout="block" rendered="#{not identity.loggedIn}">
 				<h:form>
 					<h:panelGrid>
@@ -26,11 +27,12 @@
 						<h:inputText id="username" value="#{credentials.username}" label="Username" required="true"  styleClass="text-text-area" requiredMessage="UserName is Required" size="20"/>
 						<h:outputLabel for="password" styleClass="item_label">Password:</h:outputLabel>
 						<h:inputSecret id="password" value="#{credentials.password}" required="true"  styleClass="text-text-area" requiredMessage="Password is Required" size="20"/>
-						<h:outputText value="&nbsp;" />
+						<h:outputText value="&nbsp;" /><h:outputText value="&nbsp;" /><h:outputText value="&nbsp;" />
 						<h:commandButton value="Login" title="Log Me In!" styleClass="vbButton vbButton-medium vzButton-red" action="#{identity.login}" oncomplete="document.location.href='home.seam'"/>
 					</h:panelGrid>
 				</h:form>
 			</h:panelGroup>
+		</div>
 		</ui:define>
 		<ui:define name="footer">
 	
