@@ -71,3 +71,29 @@ rf-tab-hdr-spcr{
 .tabset .tab_content ul.bullet_black li{background:url(../../images/lists/ul_bullet_black.gif) no-repeat 0px 5px; padding:0 0 8px 15px;}
 .tabset .tab_content ul.bullet_red li{background:url(../../images/lists/ul_bullet_red.gif) no-repeat 0px 5px; padding:0 0 8px 15px;}
 .tabset .tab_content ul.bullet_gray li{background:url(../../images/lists/ul_bullet_gray.gif) no-repeat 0px 5px; padding:0 0 8px 15px;}
+
+/* webkit */
+::-webkit-selection  { background-color: #FFA; color: #000;}
+/* Mozilla based browsers */
+::-moz-selection { background-color: #FFA; color: #000;}
+/* Works in Safari */
+::selection { background-color: #FFA; color: #000;}
+
+
+input[type=text], input[type=radio], input[type=checkbox], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+ 
+input[type=text]:focus, textarea:focus, input[type=radio]:focus, input[type=checkbox]:focus{
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
